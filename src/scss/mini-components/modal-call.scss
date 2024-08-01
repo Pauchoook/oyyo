@@ -2,6 +2,9 @@
   &__title {
     max-width: 380px;
     margin-bottom: 30px;
+    @include mobile {
+      max-width: 190px;
+    }
   }
   &__content {
     font-weight: 300;

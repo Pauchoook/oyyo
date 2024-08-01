@@ -83,6 +83,14 @@
     @include laptop {
       right: -15px;
     }
+    @include tablet {
+      width: 230px;
+      top: -75px;
+    }
+    @include mobile {
+      width: 175px;
+      top: -70px;
+    }
   }
   &__close {
     position: absolute;
