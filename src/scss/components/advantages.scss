@@ -1,0 +1,183 @@
+.advantages {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0px 90px 0px;
+  background-color: var(--whisper);
+  z-index: 1;
+  &__word {
+    position: absolute;
+    display: block;
+    color: white;
+    font-weight: 900;
+    font-size: 152px;
+    line-height: 14%;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    z-index: -1;
+    &--first {
+      left: -38px;
+      top: 475px;
+    }
+    &--last {
+      top: 356px;
+      left: 68px;
+    }
+    @include big-screen {
+      &--first {
+        left: -295px;
+      }
+      &--last {
+        left: -190px;
+      }
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__circle {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 585px;
+    height: 585px;
+    z-index: -1;
+    &--min {
+      top: -400px;
+      right: 45px;
+      background: linear-gradient(180deg, #ff9f9f 0%, rgba(255, 255, 255, 0) 100%);;
+    }
+    &--right {
+      right: -290px;
+      top: -290px;
+      background: linear-gradient(180deg, #fff1f1 0%, #ffe7e2 100%);
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  @include tablet {
+    padding: 30px 0px;
+  }
+  &__body {
+    max-width: 1215px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    @include tablet {
+      margin-bottom: 10px;
+    }
+  }
+  &__head {
+    @include flex-center;
+    margin-bottom: 45px;
+    gap: 25px;
+    @include tablet {
+      align-items: start;
+      gap: 12px;
+    }
+  }
+  &__logo {
+    width: 130px;
+    @include tablet {
+      width: 70px;
+    }
+  }
+  &__content {
+    margin: 0;
+    max-width: 680px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    @include tablet {
+      font-size: 16px;
+      line-height: 144%;
+    }
+  }
+  &__wrapper {
+    @include flex-between;
+    @include desktop {
+      display: block;
+    }
+  }
+  &__img {
+    width: 700px;
+    @include big-screen {
+      width: 670px;
+    }
+    @include desktop {
+      width: 570px;
+    }
+    @include laptop {
+      width: 500px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    @include desktop {
+      margin-top: 25px;
+      gap: 24px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-bottom: 25px;
+      &::-webkit-scrollbar {
+        height: 2px;
+        background-color: var(--gallery);
+      }
+      &::-webkit-scrollbar-thumb {
+        height: 2px;
+        background-color: var(--red);
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 15px;
+    &:first-child,
+    &:last-child {
+      transform: translateX(-95px);
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      transform: translateX(-30px);
+    }
+    @include desktop {
+      transform: translateX(0) !important;
+      flex: 0 1 calc(50% - 12px);
+    }
+    @include tablet {
+      flex: 0 1 315px;
+    }
+  }
+  &__number {
+    font-family: "BebasNeue", sans-serif;
+    display: block;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+  &__item-info {
+    max-width: 365px;
+  }
+  &__item-title {
+    margin-bottom: 6px;
+    font-size: 19px;
+    line-height: 116%;
+  }
+  &__item-content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 157%;
+    @include tablet {
+      font-size: 12px;
+      max-width: 250px;
+      white-space: initial;
+    }
+  }
+}

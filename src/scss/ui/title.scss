@@ -1,9 +1,9 @@
 .title {
   font-family: "RoadRadio", sans-serif;
+  font-weight: 300;
   margin: 0;
 }
 .title-1 {
-  font-weight: 300;
   font-size: 48px;
   @include laptop {
     font-size: 42px;
