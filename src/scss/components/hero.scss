@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--red);
+  z-index: 1;
+  color: white;
+  min-height: 100vh;
+  padding-top: 320px;
+  padding: 320px 0px 215px 0px;
+  @include big-screen {
+    padding: 190px 0px 100px 0px;
+  }
+  @include desktop {
+    padding: 120px 0px 70px 0px;
+  }
+  @include tablet {
+    padding: 80px 0px 30px 0px;
+  }
+  &__circle {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    @include laptop {
+      display: none;
+    }
+    &--orange {
+      width: 395px;
+      height: 395px;
+      background: linear-gradient(180deg, #ffb500 0%, #dc2e0a 100%);
+      z-index: -1;
+      &.top {
+        top: -144px;
+        left: -344px;
+      }
+      &.bottom {
+        right: -300px;
+        bottom: 45px;
+      }
+    }
+    &--white {
+      width: 585px;
+      height: 585px;
+      background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: -2;
+      &.top {
+        top: 180px;
+        left: -485px;
+        transform: rotate(225deg);
+      }
+      &.bottom {
+        right: -406px;
+        bottom: 180px;
+        transform: rotate(408deg);
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 990px;
+    right: 150px;
+    top: 45px;
+    z-index: -1;
+    @include big-screen {
+      width: 680px;
+      right: 0;
+    }
+    @include desktop {
+      width: 590px;
+    }
+    @include laptop {
+      width: 530px;
+      right: -150px;
+    }
+    @include tablet {
+      width: 450px;
+      top: auto;
+      bottom: 0px;
+    }
+    @include mobile {
+      max-width: none;
+      width: 425px;
+      bottom: 110px;
+      right: auto;
+      left: -20px;
+    }
+  }
+  &__title {
+    max-width: 615px;
+    margin-bottom: 50px;
+    @include laptop {
+      margin-bottom: 35px;
+      max-width: 550px;
+    }
+    @include tablet {
+      margin-bottom: 15px;
+    }
+    @include mobile {
+      font-size: 27px;
+    }
+  }
+  &__content {
+    font-size: 24px;
+    max-width: 500px;
+    margin: 0px 0px 50px 0px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    display: block;
+    max-width: 265px;
+    @include mobile {
+      max-width: none;
+      width: 100%;
+      margin-top: 390px;
+    }
+  }
+}
