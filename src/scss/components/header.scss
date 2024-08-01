@@ -1,0 +1,187 @@
+.header {
+  background-color: var(--red);
+  color: white;
+  padding: 20px 0px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    width: 130px;
+    height: 55px;
+    @include desktop {
+      width: 90px;
+      height: 40px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+  }
+  &__nav {
+    display: flex;
+    flex: 1;
+    padding-left: 80px;
+    align-items: center;
+    @include desktop {
+      padding-left: 20px;
+    }
+    @include laptop {
+      position: fixed;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 375px;
+      width: 100%;
+      padding: 15px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: white;
+      z-index: 100;
+      color: black;
+      transform: translateX(-375px);
+      transition: transform .5s ease;
+      &.open {
+        transform: translateX(0)
+      }
+    }
+  }
+  &__nav-head {
+    @include flex-between;
+    margin-bottom: 35px;
+    display: none;
+    @include laptop {
+      display: flex;
+    }
+  }
+  &__nav-logo {
+    width: 90px;
+  }
+  &__nav-logo-img {
+    width: 100%;
+    height: auto;
+  }
+  &__nav-close {
+    position: relative;
+    @include flex-center;
+    width: 45px;
+    height: 45px;
+    color: var(--red);
+    span {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: currentColor;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    @include laptop {
+      flex: auto;
+      flex-direction: column;
+      row-gap: 30px;
+      border-bottom: 1px solid var(--silver);
+      padding-bottom: 40px;
+      li {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  &__nav-btn {
+    position: relative;
+    font-size: 16px;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: currentColor;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 1px;
+      transition: right 0.2s ease;
+    }
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    @include desktop {
+      font-size: 14px;
+    }
+  }
+  &__btn-call {
+    margin-left: 80px;
+    color: black;
+    font-size: 12px !important;
+    padding: 20px 30px !important;
+    @include desktop {
+      margin-left: 20px;
+      padding: 12px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__connection {
+    display: none;
+    padding: 40px 0px 20px 0px;
+    @include laptop {
+      display: block;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    margin-bottom: 30px;
+  }
+  &__contacts-item {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  &__social {
+    @include flex-between;
+  }
+  &__social-btn {
+    display: block;
+    width: 52px;
+    height: 52px;
+    color: var(--red);
+    transition: transform .2s ease;
+    @include hover {
+      transform: scale(1.13);
+    }
+  }
+  &__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__burger-open {
+    @include flex-between;
+    flex-direction: column;
+    display: none;
+    width: 28px;
+    height: 20px;
+    margin-left: auto;
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: white;
+    }
+    @include laptop {
+      display: flex;
+    }
+  }
+}
