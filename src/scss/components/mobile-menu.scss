@@ -1,0 +1,55 @@
+.mobile-menu {
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 -1px 22px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 7px 0px;
+  display: none;
+  z-index: 100;
+  @include laptop {
+    display: block;
+  }
+  &__container {
+    @include flex-between;
+    position: relative;
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px 0px 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 20px;
+      background: url('@img/mobil-mark.svg') 0 0 / 100% 100% no-repeat;
+      left: 30px;
+      top: -20px;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 40px;
+  }
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+  &__btn {
+    width: 25px;
+    height: 25px;
+    color: var(--silver);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--red);
+    }
+  }
+  &__btn-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__btn-call {
+  }
+}

@@ -38,10 +38,11 @@
       padding: 15px;
       height: 100vh;
       overflow-y: auto;
-      background-color: white;
-      z-index: 100;
+      z-index: 150;
       color: black;
       transform: translateX(-375px);
+      background: url('@img/decor/burger-decor.svg') bottom 0 right 0 / 100% 155px no-repeat;
+      background-color: white;
       transition: transform .5s ease;
       &.open {
         transform: translateX(0)

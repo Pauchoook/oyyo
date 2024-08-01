@@ -5,16 +5,32 @@
   border-radius: 0;
   padding: 0;
   color: inherit;
+}
+
+.btn-custom {
+  font-family: "RoadRadio", sans-serif;
+  text-transform: uppercase;
+  border-radius: 4px;
+  &.btn-stroke {
+    color: var(--red);
+    border: 1px solid var(--red);
+    font-size: 11px;
+    padding: 16px;
+    transition: color 0.2s ease;
+    @include hover {
+      background-color: var(--red);
+      color: white;
+    }
+  }
   &.btn-primary {
-    font-family: "RoadRadio", sans-serif;
     padding: 29px;
     font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 4px;
     background-color: white;
     border: 1px solid white;
     color: black;
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
     @include hover {
       background-color: transparent;
       color: white;
