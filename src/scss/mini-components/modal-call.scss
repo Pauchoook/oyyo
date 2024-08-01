@@ -1,0 +1,15 @@
+.modal-call {
+  &__title {
+    max-width: 380px;
+    margin-bottom: 30px;
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 18px;
+    max-width: 310px;
+    margin: 0px 0px 45px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}

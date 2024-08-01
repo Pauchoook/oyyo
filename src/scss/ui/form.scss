@@ -1,0 +1,58 @@
+.form {
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  &__input-wrapper {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet {
+      flex-basis: 450px;
+    }
+  }
+  &__label {
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+  }
+  &__input {
+    font-size: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    color: inherit;
+    padding: 22px;
+    width: 100%;
+    &::placeholder {
+      color: inherit;
+      font-size: inherit;
+    }
+    @include tablet {
+      backdrop-filter: blur(28px);
+      background: rgba(255, 255, 255, 0.23);
+    }
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+  &__btn {
+    max-width: calc(50% - 12px);
+    width: 100%;
+    @include tablet {
+      max-width: 450px;
+    }
+    @include mobile {
+      max-width: none;
+    }
+  }
+  &__politic {
+    font-size: 14px;
+    a {
+      color: var(--supernova);
+      text-decoration: underline;
+    }
+  }
+}

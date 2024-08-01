@@ -5,6 +5,7 @@
   border-radius: 0;
   padding: 0;
   color: inherit;
+  text-align: center;
 }
 
 .btn-custom {
@@ -31,6 +32,14 @@
     transition:
       color 0.2s ease,
       background-color 0.2s ease;
+    &--green {
+      background-color: var(--snow-flurry);
+      border-color: var(--snow-flurry);
+      @include hover {
+        color: var(--snow-flurry);
+        background-color: transparent;
+      }
+    }
     @include hover {
       background-color: transparent;
       color: white;
