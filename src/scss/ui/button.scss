@@ -31,18 +31,26 @@
     color: black;
     transition:
       color 0.2s ease,
-      background-color 0.2s ease;
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+    &:active {
+      border-color: black !important;
+      background-color: white !important;
+      color: black !important;
+    }
+    @include hover {
+      background-color: black;
+      color: white;
+      border-color: black;
+    }
     &--green {
       background-color: var(--snow-flurry);
       border-color: var(--snow-flurry);
-      @include hover {
-        color: var(--snow-flurry);
-        background-color: transparent;
+      &:active {
+        border-color: var(--snow-flurry) !important;
+        background-color: transparent !important ;
+        color: var(--snow-flurry) !important;
       }
-    }
-    @include hover {
-      background-color: transparent;
-      color: white;
     }
   }
 }

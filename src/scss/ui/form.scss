@@ -5,6 +5,8 @@
     gap: 24px;
   }
   &__input-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
     flex: 0 1 calc(50% - 12px);
     @include tablet {
       flex-basis: 450px;
@@ -29,6 +31,13 @@
     &::placeholder {
       color: inherit;
       font-size: inherit;
+    }
+    &:focus {
+      color: var(--supernova);
+      border-color: var(--supernova);
+      & + label {
+        color: var(--supernova);
+      }
     }
     @include tablet {
       backdrop-filter: blur(28px);

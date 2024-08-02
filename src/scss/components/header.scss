@@ -169,7 +169,9 @@
     color: var(--red);
     transition: transform .2s ease;
     @include hover {
-      transform: scale(1.13);
+      .header__social-icon {
+        color: black;
+      }
     }
   }
   &__social-icon {
