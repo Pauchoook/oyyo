@@ -133,4 +133,32 @@
       margin-top: 390px;
     }
   }
+  &__mouse {
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 30px;
+    left: calc(50% - 26px);
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      display: block;
+      margin-top: 15px;
+    }
+    @include hover {
+      .hero__mouse-icon {
+        transform: translateY(5px);
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__mouse-icon {
+    width: 25px;
+    height: 40px;
+    transition: transform 0.2s ease;
+  }
 }

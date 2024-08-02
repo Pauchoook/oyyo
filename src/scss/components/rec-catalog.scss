@@ -1,0 +1,191 @@
+.rec-catalog {
+  padding: 100px 0px;
+  @include tablet {
+    padding: 30px 0px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+      row-gap: 25px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: block;
+    flex: 0 1 calc(33% - 16px);
+    min-height: 615px;
+    border-radius: 4px;
+    padding: 30px 40px;
+    background-color: var(--whisper);
+    z-index: 1;
+    &--red {
+      color: white;
+      background-color: var(--red);
+    }
+    @include big-screen {
+      padding: 15px;
+      min-height: 465px;
+    }
+    @include laptop {
+      min-height: 390px;
+      flex-basis: calc(33% - 10px);
+    }
+    @include tablet {
+      flex: auto;
+      min-height: 235px;
+      padding: 30px;
+      &--red {
+        order: 3;
+      }
+    }
+    @include mobile {
+      padding: 30px;
+    }
+  }
+  &__item-decor {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 275px;
+    bottom: 135px;
+    left: 0;
+    z-index: -1;
+    @include laptop {
+      bottom: 60px;
+    }
+    @include tablet {
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      
+    }
+  }
+  &__item-head {
+    @include flex-between;
+    margin-bottom: 75px;
+    @include desktop {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 0;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 36px;
+    text-transform: uppercase;
+    @include desktop {
+      font-size: 30px;
+    }
+    @include laptop {
+      font-size: 24px;
+    }
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__wrapper-arrow {
+    @include flex-center;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: black;
+    color: white;
+    transition: background-color 0.2s ease;
+    @include hover {
+      background-color: var(--red);
+    }
+    @include laptop {
+      width: 60px;
+      height: 60px;
+    }
+    @include tablet {
+      order: 3;
+      margin-top: 30px;
+    }
+  }
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__proposal {
+    position: absolute;
+    max-width: 160px;
+    font-family: "RoadRadio", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    left: 50px;
+    bottom: 50px;
+    z-index: 2;
+    @include desktop {
+      left: 15px;
+      bottom: 15px;
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      left: 30px;
+      bottom: 30px;
+    }
+    @include mobile {
+      max-width: 135px;
+    }
+  }
+  &__img {
+    display: block;
+    width: 300px;
+    @include laptop {
+      width: 175px;
+    }
+    @include tablet {
+      position: absolute;
+      right: 0;
+      top: 25px;
+      right: 20px;
+      width: 185px;
+    }
+    @include mobile {
+      width: 135px;
+    }
+  }
+  &__content {
+    position: absolute;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    bottom: 242px;
+    right: -125px;
+    white-space: nowrap;
+    @include big-screen {
+      right: -175px;
+    }
+    @include desktop {
+      position: static;
+      white-space: initial;
+      transform: rotate(0);
+      order: 3;
+      margin-top: 24px;
+    }
+    @include tablet {
+      margin-top: 0;
+      max-width: 150px;
+    }
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

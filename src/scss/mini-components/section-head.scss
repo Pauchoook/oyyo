@@ -1,0 +1,36 @@
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 75px;
+  @include tablet {
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  &__logo {
+    width: 130px;
+    @include laptop {
+      width: 100px;
+    }
+    @include tablet {
+      width: 70px;
+    }
+  }
+  &__btn {
+    font-family: "RoadRadio", sans-serif;
+    display: block;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 310%;
+    text-transform: uppercase;
+    margin-left: auto;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--red);
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 387%;
+    }
+  }
+}
