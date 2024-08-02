@@ -2,16 +2,16 @@
   position: relative;
   background-color: var(--red);
   color: white;
-  padding: 70px 0px;
+  padding: 50px 0px;
   z-index: 1;
   @include tablet {
     padding: 30px 0px;
   }
   &__mail {
     position: absolute;
-    width: 510px;
-    right: 350px;
-    top: -70px;
+    width: 655px;
+    right: 235px;
+    top: -86px;
     z-index: -1;
     @include big-screen {
       right: 0;
@@ -24,7 +24,7 @@
     }
     @include tablet {
       top: auto;
-      bottom: 165px;
+      bottom: 120px;
       right: auto;
       width: 370px;
     }
