@@ -15,11 +15,14 @@
 .title-2 {
   font-size: 36px;
   line-height: 110%;
+  @include desktop {
+    font-size: 32px;
+  }
   @include tablet {
     font-size: 28px;
   }
   @include tablet {
-    font-size: 24px;
+    font-size: 22px;
   }
   @include mobile {
     font-size: 16px;

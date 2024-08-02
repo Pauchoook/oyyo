@@ -6,6 +6,7 @@ import burger from "./files/burger.js";
 import modal from "./files/modal.js";
 
 functions.isWebp();
+functions.mediaAdaptive();
 spoller();
 burger();
 modal();

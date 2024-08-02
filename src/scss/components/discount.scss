@@ -1,0 +1,86 @@
+.discount {
+  position: relative;
+  background-color: var(--red);
+  color: white;
+  padding: 70px 0px;
+  z-index: 1;
+  @include tablet {
+    padding: 30px 0px;
+  }
+  &__mail {
+    position: absolute;
+    width: 510px;
+    right: 350px;
+    top: -70px;
+    z-index: -1;
+    @include big-screen {
+      right: 0;
+    }
+    @include desktop {
+      width: 430px;
+    }
+    @include laptop {
+      width: 390px;
+    }
+    @include tablet {
+      top: auto;
+      bottom: 165px;
+      right: auto;
+      width: 370px;
+    }
+    @include mobile {
+      width: 250px;
+      bottom: 165px;
+      right: calc(50% - 125px);
+    }
+  }
+  &__logo {
+    position: absolute;
+    width: 990px;
+    top: 25px;
+    right: 35px;
+    z-index: -2;
+    @include tablet {
+      width: 825px;
+      top: calc(50% - 115px);
+      right: 0;
+    }
+    @include mobile {
+      top: 33%;
+    }
+  }
+  &__title {
+    @include mobile {
+      font-size: 25px;
+    }
+  }
+  &__content {
+    margin: 40px 0px 0px 0px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    max-width: 545px;
+    @include laptop {
+      font-size: 18px;
+      max-width: 350px;
+    }
+    @include tablet {
+      font-size: 16px;
+      max-width: 550px;
+      margin-top: 20px;
+    }
+  }
+  &__form {
+    margin-top: 30px;
+    max-width: 545px;
+    @include tablet {
+      margin-top: 245px;
+    }
+    @include mobile {
+      margin-top: 190px;
+      .input {
+        font-size: 18px;
+      }
+    }
+  }
+}
