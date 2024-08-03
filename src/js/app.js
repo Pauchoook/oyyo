@@ -5,6 +5,7 @@ import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
 import modal from "./files/modal.js";
 import map from "./files/map.js";
+import slider from "./files/slider.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -12,3 +13,4 @@ spoller();
 burger();
 modal();
 map();
+slider();

@@ -1,0 +1,88 @@
+.breadcrumbs {
+  display: flex;
+  gap: 115px;
+  color: white;
+  @include laptop {
+    gap: 80px;
+  }
+  @include tablet {
+    gap: 15px;
+  }
+  @include mobile {
+    max-width: 315px
+  }
+  &__prev {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    opacity: 0.52;
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 1;
+      .breadcrumbs__prev-circle {
+        background-color: white;
+      }
+      .breadcrumbs__icon {
+        color: var(--red)
+      }
+    }
+    @include tablet {
+      span {
+        display: none;
+      }
+    }
+  }
+  &__prev-circle {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color .2s ease;
+  }
+  &__icon {
+    display: block;
+    width: 11px;
+    height: 6px;
+    transform: rotate(90deg);
+    color: inherit;
+    transition: color .2s ease;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    &:not(:last-child) {
+      padding-right: 48px;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 32px;
+        right: 8px;
+        background-color: currentColor;
+      }
+    }
+    @include hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+    @include tablet {
+      &:not(:last-child) {
+        padding-right: 24px;
+        &::after {
+          width: 8px;
+        }
+      }
+    }
+  }
+}

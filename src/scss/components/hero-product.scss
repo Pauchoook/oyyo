@@ -1,0 +1,212 @@
+.hero-product {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--red);
+  padding: 115px 0px 180px 0px;
+  color: white;
+  z-index: 1;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transform: rotate(-108deg);
+    z-index: -1;
+  }
+  &::before {
+    width: 395px;
+    height: 395px;
+    background: linear-gradient(180deg, #ffb500 0%, #dc2e0a 100%);
+    left: -360px;
+    top: -130px;
+  }
+  &::after {
+    width: 585px;
+    height: 585px;
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    top: 20px;
+    left: -475px;
+  }
+  &__sheet {
+    position: absolute;
+    z-index: -1;
+    &--left {
+      top: 180px;
+      left: 70px;
+    }
+    &--right {
+      transform: scale(-1, 1);
+      bottom: 320px;
+      right: 55px;
+    }
+  }
+  &__body {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  &__type {
+    display: block;
+    font-size: 128px;
+    line-height: 58%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.26) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__title {
+    font-size: 55px;
+    line-height: 113%;
+    margin-bottom: 80px;
+  }
+  &__btn-order {
+    padding: 30px 40px !important;
+  }
+  &__slider {
+    position: relative;
+    max-width: 515px;
+    padding-left: 15px;
+    margin: 0px 0px 0px 10px !important;
+    .swiper-slide {
+      padding-bottom: 15px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 515px;
+      height: 515px;
+      border-radius: 50%;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 255, 25, 0.61) 0%, rgba(144, 255, 162, 0) 100%);
+      transform: rotate(101deg);
+      top: 0;
+      right: 0;
+    }
+    &::after {
+      transform: rotate(72deg);
+      background: linear-gradient(180deg, rgba(0, 255, 56, 0.1) 0%, rgba(125, 255, 122, 0.03) 100%);
+      top: 30px;
+      right: 15px;
+    }
+  }
+  &__slider-img {
+    display: block;
+    margin: 0 auto;
+    width: 325px;
+  }
+  &__info {
+    max-width: 400px;
+    margin-left: auto;
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 162%;
+    margin: 0px 0px 80px 0px;
+  }
+  &__spec {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__spec-title {
+    display: block;
+    font-size: 14px;
+    line-height: 214%;
+  }
+  &__spec-list {
+    display: flex;
+    gap: 25px;
+  }
+  &__spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 167%;
+  }
+  &__spec-icon {
+    width: 40px;
+    height: 40px;
+  }
+  &__nav {
+    @include flex-between;
+    margin-top: 20px;
+  }
+  &__nav-btn {
+    font-family: "RoadRadio", sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 162%;
+    gap: 20px;
+    @include hover {
+      .hero-product__nav-arrow {
+        opacity: 1;
+      }
+    }
+    &--next {
+      .hero-product__nav-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__nav-arrow {
+    width: 40px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  &__slider-pagination {
+    display: flex;
+    gap: 10px;
+  }
+  &__pagination-btn {
+    @include flex-center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(216, 219, 229, 0.12);
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.19);
+    transition: background-color 0.2s ease;
+    &.active {
+      background-color: white;
+    }
+    @include hover {
+      background-color: white;
+    }
+  }
+  &__pagination-img {
+    width: 25px;
+  }
+  &__bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 0px 30px 0px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  &__bottom-container {
+    display: flex;
+  }
+  &__bottom-item {
+    display: flex;
+    gap: 40px;
+    flex: 0 1 50%;
+  }
+  &__bottom-title {
+    font-size: 20px;
+  }
+  &__bottom-content {
+    margin: 0;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 162%;
+    max-width: 310px;
+  }
+}
