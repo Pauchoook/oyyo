@@ -2,9 +2,12 @@
   position: relative;
   min-height: 100vh;
   background-color: var(--red);
-  padding: 115px 0px 180px 0px;
+  padding-top: 115px;
   color: white;
   z-index: 1;
+  @include tablet {
+    padding-top: 70px;
+  }
   &::before,
   &::after {
     position: absolute;
@@ -27,11 +30,18 @@
     top: 20px;
     left: -475px;
   }
+  @include mobile {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
   &__sheet {
     position: absolute;
+    width: 185px;
     z-index: -1;
     &--left {
-      top: 180px;
+      top: 185px;
       left: 70px;
     }
     &--right {
@@ -39,11 +49,30 @@
       bottom: 320px;
       right: 55px;
     }
+    @include big-screen {
+      &--left {
+        left: calc(50% - 90px);
+      }
+    }
+    @include laptop {
+      &--right {
+        bottom: 165px;
+      }
+    }
+    @include tablet {
+      display: none;
+    }
   }
   &__body {
     margin-top: 40px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  &__left {
+    @include big-screen {
+      width: 100%;
+    }
   }
   &__type {
     display: block;
@@ -54,64 +83,123 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include tablet {
+      font-size: 68px;
+      line-height: 91%;
+    }
   }
   &__title {
     font-size: 55px;
     line-height: 113%;
     margin-bottom: 80px;
+    @include tablet {
+      font-size: 36px;
+      line-height: 172%;
+      margin-bottom: 0;
+    }
   }
   &__btn-order {
     padding: 30px 40px !important;
+    @include big-screen {
+      margin: 30px 0px 60px 0px;
+    }
+    @include mobile {
+      width: 100%;
+    }
   }
   &__slider {
     position: relative;
-    max-width: 515px;
+    max-width: 532px;
     padding-left: 15px;
-    margin: 0px 0px 0px 10px !important;
+    margin: 0 !important;
     .swiper-slide {
       padding-bottom: 15px;
     }
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      width: 515px;
-      height: 515px;
-      border-radius: 50%;
+    @include desktop {
+      max-width: 510px;
+    }
+    @include laptop {
+      margin: 0 auto !important;
     }
     &::before {
       position: absolute;
       content: "";
-      background: linear-gradient(180deg, rgba(0, 255, 25, 0.61) 0%, rgba(144, 255, 162, 0) 100%);
-      transform: rotate(101deg);
-      top: 0;
+      inset: 0;
+      background: url("@img/decor/geen-circle.svg") 0 0 / 100% 100% no-repeat;
+      z-index: -1;
+    }
+  }
+  &__slider-btn {
+    position: absolute;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    top: calc(50% - 20px);
+    z-index: 10;
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      transform: rotate(180deg);
       right: 0;
     }
-    &::after {
-      transform: rotate(72deg);
-      background: linear-gradient(180deg, rgba(0, 255, 56, 0.1) 0%, rgba(125, 255, 122, 0.03) 100%);
-      top: 30px;
-      right: 15px;
+    @include tablet {
+      @include flex-center;
     }
+  }
+  &__slider-btn-icon {
+    width: 11px;
+    height: 6px;
+    transform: rotate(90deg);
+    opacity: 0.7;
   }
   &__slider-img {
     display: block;
     margin: 0 auto;
     width: 325px;
+    @include mobile {
+      width: 185px;
+    }
   }
   &__info {
     max-width: 400px;
     margin-left: auto;
+    @include big-screen {
+      margin-left: 40px;
+      order: 2;
+    }
+    @include desktop {
+      max-width: none;
+    }
+    @include laptop {
+      margin-left: 0;
+    }
   }
   &__content {
     font-size: 16px;
     line-height: 162%;
     margin: 0px 0px 80px 0px;
+    @include desktop {
+      margin-bottom: 25px;
+    }
+    @include tablet {
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 143%;
+    }
   }
   &__spec {
     display: flex;
     align-items: center;
     gap: 40px;
+    @include mobile {
+      gap: 0px;
+      justify-content: space-between;
+    }
   }
   &__spec-title {
     display: block;
@@ -135,7 +223,10 @@
   }
   &__nav {
     @include flex-between;
-    margin-top: 20px;
+    margin: 20px 0px 50px 0px;
+    @include tablet {
+      display: none;
+    }
   }
   &__nav-btn {
     font-family: "RoadRadio", sans-serif;
@@ -164,6 +255,27 @@
   &__slider-pagination {
     display: flex;
     gap: 10px;
+    &--number {
+      position: absolute;
+      display: none;
+      background-color: white;
+      padding: 3px 8px;
+      border-radius: 20px;
+      z-index: 10;
+      font-size: 14px;
+      line-height: 143%;
+      color: black;
+      .swiper-pagination-current {
+        font-weight: 700;
+      }
+    }
+    @include tablet {
+      &--number {
+        display: block;
+        left: 0;
+        bottom: 0;
+      }
+    }
   }
   &__pagination-btn {
     @include flex-center;
@@ -184,20 +296,30 @@
     width: 25px;
   }
   &__bottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 5px 0px 30px 0px;
     background: rgba(255, 255, 255, 0.08);
   }
   &__bottom-container {
     display: flex;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
   &__bottom-item {
     display: flex;
     gap: 40px;
     flex: 0 1 50%;
+    @include desktop {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    @include tablet {
+      flex-basis: calc(50% - 10px);
+    }
+    @include mobile {
+      flex-basis: 100%;
+    }
   }
   &__bottom-title {
     font-size: 20px;

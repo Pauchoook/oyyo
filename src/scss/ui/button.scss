@@ -12,6 +12,7 @@
   font-family: "RoadRadio", sans-serif;
   text-transform: uppercase;
   border-radius: 4px;
+  display: inline-block;
   &.btn-stroke {
     color: var(--red);
     border: 1px solid var(--red);

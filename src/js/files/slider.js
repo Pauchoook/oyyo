@@ -13,11 +13,13 @@ export default function slider() {
       modules: [Pagination, Autoplay, Navigation],
       autoplay: true,
       grabCursor: true,
+      navigation: {
+        prevEl: ".hero-product__slider-btn--prev",
+        nextEl: ".hero-product__slider-btn--next"
+      },
       pagination: {
-        el: ".hero-product__slider-pagination",
-        clickable: true,
-        type: "custom",
-        bulletClass: "hero-product__pagination-btn",
+        el: ".hero-product__slider-pagination--number",
+        type: "fraction",
       },
       on: {
         init: () => {
@@ -27,6 +29,16 @@ export default function slider() {
         slideChange: ({activeIndex}) => {
           buttonsPagination.forEach(btn => btn.classList.remove("active"));
           buttonsPagination[activeIndex].classList.add("active")
+        }
+      },
+      breakpoints: {
+        768: {
+          pagination: {
+            el: ".hero-product__slider-pagination",
+            clickable: true,
+            type: "custom",
+            bulletClass: "hero-product__pagination-btn",
+          },
         }
       }
     });

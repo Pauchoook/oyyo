@@ -9,7 +9,7 @@
     alt="sheet"
     class="hero-product__sheet hero-product__sheet--right"
   />
-  <div class="container">
+  <div class="container hero-product__container">
     <div class="breadcrumbs">
       <a href="#" class="breadcrumbs__prev">
         <div class="breadcrumbs__prev-circle">
@@ -30,11 +30,22 @@
       <div class="hero-product__left">
         <span class="title hero-product__type">Альфа</span>
         <h1 class="title hero-product__title">Аминобиостим</h1>
-        <button class="btn btn-custom btn-primary hero-product__btn-order">
+        <a data-da=".hero-product__container,1439,3" href="#" class="btn btn-custom btn-primary hero-product__btn-order">
           Заказать удобрение
-        </button>
+        </a>
       </div>
       <div class="swiper hero-product__slider">
+        <button class="btn hero-product__slider-btn hero-product__slider-btn--prev">
+          <svg class="hero-product__slider-btn-icon">
+            <use xlink:href='img/icons/icons.svg#icon-arrow'></use>
+          </svg>
+        </button>
+        <button class="btn hero-product__slider-btn hero-product__slider-btn--next">
+          <svg class="hero-product__slider-btn-icon">
+            <use xlink:href='img/icons/icons.svg#icon-arrow'></use>
+          </svg>
+        </button>
+        <div class="hero-product__slider-pagination hero-product__slider-pagination--number"></div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
