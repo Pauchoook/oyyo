@@ -1,0 +1,75 @@
+.quality {
+  position: relative;
+  padding: 100px 0px;
+  z-index: 1;
+  @include tablet {
+    padding: 50px 0px 30px 0px;
+  }
+  &__list {
+    max-width: 620px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    @include desktop {
+      margin: 0px auto 25px auto;
+    }
+    @include tablet {
+      gap: 14px;
+    }
+  }
+  &__item {
+    flex: 0 1 135px;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: var(--whisper);
+    &:first-child {
+      color: white;
+      background-color: var(--red);
+      font-weight: 600;
+    }
+    @include tablet {
+      padding: 15px;
+      flex-basis: calc(33.33% - 10px);
+    }
+    @include mobile {
+      // flex-basis: 105px;
+    }
+  }
+  &__logo {
+    width: 95px;
+  }
+  &__percent {
+    display: block;
+    font-size: 24px;
+    margin-top: 25px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__element {
+    font-size: 24px;
+    color: var(--red);
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    width: 645px;
+    top: 100px;
+    right: 280px;
+    z-index: -1;
+    @media (max-width: 1699px) {
+      right: 50px;
+    }
+    @include big-screen {
+      width: 490px;
+    }
+    @include desktop {
+      position: static;
+      margin: 0 auto;
+    }
+  }
+}

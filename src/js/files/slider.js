@@ -34,13 +34,26 @@ export default function slider() {
       breakpoints: {
         768: {
           pagination: {
-            el: ".hero-product__slider-pagination",
+            el: ".hero-product__slider-pagination--images",
             clickable: true,
             type: "custom",
             bulletClass: "hero-product__pagination-btn",
           },
         }
       }
+    });
+  }
+
+  const applySlider = document.querySelector(".apply__slider");
+
+  if (applySlider && window.matchMedia("(max-width: 1595px)").matches) {
+    const swiper = new Swiper(".apply__slider", {
+      // speed: 700,
+      // modules: [Autoplay],
+      // autoplay: true,
+      // grabCursor: true,
+      // slidesPerView: 2,
+      // spaceBetween: 20
     });
   }
 }
