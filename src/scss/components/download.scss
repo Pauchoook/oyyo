@@ -1,0 +1,67 @@
+.download {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0px;
+  background-color: var(--red);
+  color: white;
+  z-index: 1;
+  @include tablet {
+    padding: 30px 0px 160px 0px;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(158deg, #ca100d 14.37%, rgba(202, 16, 13, 0) 100%);
+      z-index: -1;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: -300px;
+    right: 250px;
+    z-index: -2;
+    @include big-screen {
+      right: 0;
+      width: 600px;
+      top: -180px;
+    }
+    @include laptop {
+      top: -50px;
+      width: 490px;
+    }
+    @include tablet {
+      top: 0;
+      width: 430px;
+      right: -35px;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 210px;
+    @include desktop {
+      gap: 50px;
+    }
+    @include laptop {
+      gap: 30px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  &__title {
+    font-size: 42px;
+    line-height: 129%;
+    max-width: 390px;
+    @include laptop {
+      font-size: 36px;
+      max-width: none;
+    }
+    @include tablet {
+      font-size: 32px;
+      line-height: 100%;
+    }
+  }
+}

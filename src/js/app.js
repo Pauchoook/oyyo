@@ -6,6 +6,8 @@ import burger from "./files/burger.js";
 import modal from "./files/modal.js";
 import map from "./files/map.js";
 import slider from "./files/slider.js";
+import moreDetail from "./files/more-detail.js";
+import tab from "./files/tab.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -14,3 +16,5 @@ burger();
 modal();
 map();
 slider();
+moreDetail();
+tab();

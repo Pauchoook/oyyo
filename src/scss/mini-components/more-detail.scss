@@ -1,0 +1,27 @@
+.more-detail {
+  position: relative;
+  @include desktop {
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      display: none;
+      content: "";
+      transform: rotate(180deg);
+      left: 0;
+      right: 0;
+      bottom: 0; 
+      height: 115px;
+      background: linear-gradient(180deg, #fff 41.32%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+}
+.more-detail-btn {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: underline;
+  color: var(--red);
+  margin-top: 25px;
+  @include hover {
+    text-decoration: none;
+  }
+}

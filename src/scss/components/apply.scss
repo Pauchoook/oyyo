@@ -163,11 +163,30 @@
     margin: 0;
     font-size: 16px;
     line-height: 179%;
-    span {
-      font-weight: 600;
+    @include desktop {
+      &.more-detail {
+        max-height: 450px;
+        height: 100%;
+        &::before {
+          display: block;
+        }
+      }
     }
     @include laptop {
       line-height: 150%;
+    }
+  }
+  &__more-btn {
+    display: none;
+    // font-weight: 300;
+    // font-size: 16px;
+    // text-decoration: underline;
+    // color: var(--red);
+    // @include hover {
+    //   text-decoration: none;
+    // }
+    @include desktop {
+      display: block;
     }
   }
 }

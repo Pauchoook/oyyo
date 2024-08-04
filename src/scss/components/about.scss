@@ -130,98 +130,9 @@
     position: absolute;
     right: 45px;
     bottom: 45px;
-    background: url("@img/decor/catalog.svg") 0 0 / 100% 100% no-repeat;
-    span {
-      display: block;
-      max-width: 65px;
-      font-size: 12px;
-      line-height: 133%;
-    }
-    @include hover {
-      .about__catalog-btn-wrapper {
-        &::before {
-          background-color: var(--red);
-          opacity: 1;
-        }
-      }
-      .about__catalog-file {
-        color: white;
-      }
-    }
     @include laptop {
       right: 20px;
       bottom: 20px;
-      span {
-        font-size: 12px;
-      }
-    }
-    @include tablet {
-      span {
-        font-size: 8px;
-      }
-    }
-    @include mobile {
-      span {
-        font-size: 6px;
-        max-width: 35px;
-      }
-    }
-  }
-  &__catalog-btn-wrapper {
-    @include flex-center;
-    position: relative;
-    flex-direction: column;
-    width: 185px;
-    height: 185px;
-    gap: 7px;
-    text-align: center;
-    z-index: 1;
-    &::before {
-      position: absolute;
-      content: "";
-      inset: 35px;
-      border-radius: 50%;
-      background-color: white;
-      opacity: 0.06;
-      z-index: -1;
-      transition: background-color .2s ease, opacity .2s ease;
-    }
-    @include laptop {
-      width: 130px;
-      height: 130px;
-      &::before {
-        inset: 23px;
-      }
-    }
-    @include tablet {
-      width: 110px;
-      height: 110px;
-      &::before {
-        inset: 18px;
-      }
-    }
-    @include mobile {
-      width: 95px;
-      height: 95px;
-      &::before {
-        inset: 15px;
-      }
-    }
-  }
-  &__catalog-file {
-    width: 28px;
-    height: 28px;
-    color: var(--red);
-    transition: color .2s ease;
-    transform: translateX(-5px);
-    @include laptop {
-      width: 20px;
-      height: 20px;
-      transform: translateX(0);
-    }
-    @include mobile {
-      width: 15px;
-      height: 15px;
     }
   }
 }

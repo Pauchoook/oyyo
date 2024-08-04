@@ -29,6 +29,13 @@
 @font-face {
 	font-family: Montserrat;
 	font-display: swap;
+	src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
 	src: url("../fonts/Montserrat-Light.woff2") format("woff2");
 	font-weight: 300;
 	font-style: normal;
@@ -52,13 +59,6 @@
 	font-display: swap;
 	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
 	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: Montserrat;
-	font-display: swap;
-	src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
-	font-weight: 800;
 	font-style: normal;
 }
 @font-face {

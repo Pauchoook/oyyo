@@ -13,6 +13,7 @@
 @import "./ui/modal";
 @import "./ui/title";
 @import "./ui/form";
+@import "./ui/tab";
 
 // mini-components
 @import "./mini-components/modal-call";
@@ -20,6 +21,8 @@
 @import "./mini-components/map";
 @import "./mini-components/socials";
 @import "./mini-components/breadcrumbs";
+@import "./mini-components/more-detail";
+@import "./mini-components/btn-download";
 
 // components
 @import "./components/header";
@@ -37,5 +40,8 @@
 @import "./components/hero-product";
 @import "./components/quality";
 @import "./components/apply";
+@import "./components/download";
+@import "./components/technology";
+@import "./components/plant";
 
 @import "./components/footer";
