@@ -1,0 +1,126 @@
+.center {
+  padding: 100px 0px;
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__container {
+    overflow: hidden;
+  }
+  &__title {
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  &__slider {
+    overflow: visible !important;
+    height: fit-content;
+  }
+  &__slide {
+    display: flex !important;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 30px;
+    @include laptop {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+  &__img-wrapper {
+    position: relative;
+    width: 365px;
+    height: fit-content;
+    z-index: 1;
+    @include laptop {
+      margin: 0 auto;
+    }
+    @include mobile {
+      max-width: 345px;
+      width: 100%;
+    }
+  }
+  &__img-preview {
+    position: absolute;
+    height: 305px;
+    width: 440px;
+    background-color: var(--god-gray);
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    transform: rotate(-90deg);
+    right: -8px;
+    bottom: 17px;
+    z-index: -1;
+    @include laptop {
+      width: 300px;
+      height: 290px;
+      right: 70px;
+      bottom: -25px;
+    }
+    @include mobile {
+      right: 50px;
+      padding: 7px;
+    }
+  }
+  &__preview-title {
+    font-size: 24px;
+    line-height: 133%;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  &__slide-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__slide-img {
+    display: block;
+    width: 315px;
+    border-radius: 4px;
+    margin-left: auto;
+    @include mobile {
+      width: 310px;
+      height: 335px;
+      object-fit: cover;
+    }
+  }
+  &__slide-info {
+    flex: 1;
+  }
+  &__slide-list {
+    margin-bottom: 30px;
+  }
+  &__slide-content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+  &__slide-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 15px;
+      top: 15px;
+      width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background-color: currentColor;
+    }
+  }
+}

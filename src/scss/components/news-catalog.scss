@@ -1,0 +1,46 @@
+.news-catalog {
+  padding: 70px 0px 100px 0px;
+  @include tablet {
+    padding: 30px 0px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    @include laptop {
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 24px;
+    @include scrollbarGorizont;
+    @include laptop {
+      gap: 18px;
+      padding-bottom: 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--mishka);
+    }
+    @include tablet {
+      gap: 12px;
+    }
+  }
+  &__btn {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background-color: var(--whisper);
+    transition: color .2s ease, background-color .2s ease;
+    &.active {
+      color: white;
+      background-color: var(--red);
+    }
+    @include hover {
+      color: white;
+      background-color: var(--red);
+    }
+  }
+}

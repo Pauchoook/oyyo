@@ -1,9 +1,24 @@
-.hero-advantages {
+.hero-simple {
+  position: relative;
+  overflow: hidden;
   padding: 110px 0px 70px 0px;
   background-color: var(--red);
   color: white;
+  z-index: 1;
   @include tablet {
     padding: 70px 0px 25px 0px;
+  }
+  &__decor {
+    position: absolute;
+    width: 985px;
+    right: -25px;
+    bottom: -135px;
+    z-index: -1;
+    @include tablet {
+      width: 380px;
+      right: -90px;
+      bottom: -40px;
+    }
   }
   &__title {
     margin-top: 50px;

@@ -71,18 +71,40 @@ export default function slider() {
     const swiper = new Swiper(".agronomy__slider", {
       speed: 700,
       modules: [Autoplay, Navigation, Pagination],
-      // autoplay: true,
+      autoplay: true,
       grabCursor: true,
       navigation: {
-        prevEl: ".slider-btn--prev.agronomy__slider-btn",
-        nextEl: ".slider-btn--next.agronomy__slider-btn",
+        prevEl: ".slider-btn--prev.agronomy__btn-slider",
+        nextEl: ".slider-btn--next.agronomy__btn-slider",
       },
       pagination: {
         el: ".agronomy__slider-pagination",
         type: "custom",
         renderCustom: function (swiper, current, total) {
-          return `<span>0${current}</span> <span class="agronomy__nav-total">/0${total}</span>`;
-        }
+          return `<span>0${current}</span> <span class="slider-nav__total">/0${total}</span>`;
+        },
+      },
+    });
+  }
+  const centerSlider = document.querySelector(".center__slider");
+
+  if (centerSlider) {
+    const swiper = new Swiper(".center__slider", {
+      speed: 700,
+      modules: [Autoplay, Navigation, Pagination],
+      // autoplay: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".slider-btn--prev.center__btn-slider",
+        nextEl: ".slider-btn--next.center__btn-slider",
+      },
+      pagination: {
+        el: ".center__slider-pagination",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          return `<span>0${current}</span> <span class="slider-nav__total">/0${total}</span>`;
+        },
       },
     });
   }

@@ -8,6 +8,7 @@ import map from "./files/map.js";
 import slider from "./files/slider.js";
 import moreDetail from "./files/more-detail.js";
 import tab from "./files/tab.js";
+import { dropdown } from "./files/dropdown.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -18,3 +19,4 @@ map();
 slider();
 moreDetail();
 tab();
+dropdown();

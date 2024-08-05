@@ -1,0 +1,58 @@
+.advantages-products {
+  padding-bottom: 90px;
+  @include tablet {
+    padding-bottom: 30px;
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0px 0px 50px 0px;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 24px;
+    @include big-screen {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 0 1 325px;
+    gap: 20px;
+    padding: 28px 25px 28px 15px;
+    background-color: var(--whisper);
+    @include tablet {
+      padding-right: 25px;
+      flex-basis: 100%;
+    }
+  }
+  &__icon {
+    width: 75px;
+  }
+  &__info {
+    max-width: 200px;
+    @include tablet {
+      max-width: 400px;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px 0px 15px 0px;
+  }
+  &__item-content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+  }
+}

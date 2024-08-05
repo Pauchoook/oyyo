@@ -25,35 +25,6 @@
   &__map {
     width: 100%;
   }
-  &__slider-nav {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 24px;
-    @include mobile {
-      justify-content: space-between;
-    }
-  }
-  &__slider-pagination {
-    display: flex;
-    align-items: start;
-    gap: 5px;
-    font-size: 40px;
-    line-height: 70%;
-    color: var(--mishka);
-    @include tablet {
-      font-size: 32px;
-      line-height: 87%;
-    }
-  }
-  &__nav-total {
-    font-size: 20px;
-    transform: translateY(-10px);
-    @include tablet {
-      transform: translateY(-5px);
-      font-size: 16px;
-    }
-  }
   &__list {
     @include flex-between;
     flex-wrap: wrap;
