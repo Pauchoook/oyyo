@@ -142,4 +142,135 @@
       max-width: none;
     }
   }
+  &__fulvic {
+    margin-top: 160px;
+    @include laptop {
+      margin-top: 55px;
+    }
+  }
+  &__fulvic-body {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    gap: 20px;
+    @include laptop {
+      flex-direction: column;
+      gap: 40px;
+      padding-right: 0;
+    }
+  }
+  &__fulvic-info {
+    max-width: 665px;
+    @include big-screen {
+      max-width: 520px;
+    }
+    @include laptop {
+      max-width: none;
+    }
+  }
+  &__content-fulvic {
+    font-size: 18px;
+    line-height: 178%;
+    max-width: 640px;
+    margin: 0px 0px 50px 0px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 40px;
+    }
+  }
+  &__fulvic-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40px 25px 40px 0px;
+    gap: 25px;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 4px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 40px;
+      background-color: var(--whisper);
+      z-index: -1;
+    }
+    @include tablet {
+      padding: 24px;
+      &::before {
+        left: 0;
+      }
+    }
+  }
+  &__fulvic-decor {
+    width: 120px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__fulvic-bottom-content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 175%;
+  }
+  &__fulvic-container-img {
+    position: relative;
+    max-width: 565px;
+    width: 100%;
+    @include tablet {
+      
+    }
+  }
+  &__fulvic-elements {
+    position: absolute;
+    background-color: var(--god-gray);
+    padding: 0px 20px;
+    transform: rotate(-90deg);
+    width: 390px;
+    border-radius: 0px 0px 4px 4px;
+    top: 170px;
+    right: -233px;
+    @include desktop {
+      width: 295px;
+      top: 146px;
+      right: -174px;
+    }
+    @include tablet {
+      width: 235px;
+      padding: 10px;
+      right: -91px;
+      top: 106px;
+    }
+  }
+  &__fulvic-elements-content {
+    display: block;
+    opacity: 0.2;
+    font-size: 76px;
+    color: white;
+    line-height: 100%;
+    @include desktop {
+      font-size: 54px;
+    }
+    @include tablet {
+      font-size: 32px;
+      line-height: 87%;
+    }
+  }
+  &__fulvic-atom {
+    position: absolute;
+    top: 150px;
+    left: -107px;
+    width: 215px;
+    @include big-screen {
+      display: none;
+    }
+  }
+  &__fulvic-img {
+    width: 100%;
+    @include tablet {
+      width: calc(100% - 50px);
+    }
+  }
 }

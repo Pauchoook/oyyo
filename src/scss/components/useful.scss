@@ -1,0 +1,27 @@
+.useful {
+  position: relative;
+  padding-bottom: 90px;
+  z-index: 1;
+  @include big-screen {
+    padding-bottom: 690px;
+  }
+  @include tablet {
+    padding-bottom: 360px;
+  }
+  &__decor {
+    position: absolute;
+    width: 600px;
+    left: 0;
+    bottom: 90px;
+    z-index: -1;
+    @include tablet {
+      width: 310px;
+      bottom: 40px;
+    }
+  }
+  &__img {
+    display: block;
+    margin-left: auto;
+    width: 1000px;
+  }
+}
