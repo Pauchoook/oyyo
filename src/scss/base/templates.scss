@@ -17,3 +17,14 @@
     }
   }
 }
+
+@mixin scrollbarGorizont {
+  &::-webkit-scrollbar {
+    height: 2px;
+    background-color: var(--gallery);
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 2px;
+    background-color: var(--red);
+  }
+}

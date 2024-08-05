@@ -1,0 +1,105 @@
+.apply-rec {
+  padding-bottom: 135px;
+  @include tablet {
+    padding-bottom: 45px;
+  }
+  &__tab-nav {
+    overflow-y: auto;
+    white-space: nowrap;
+    @include scrollbarGorizont;
+    @include mobile {
+      .tab-nav__btn {
+        white-space: normal;
+        flex: 0 0 270px;
+      }
+    }
+  }
+  &__table {
+    margin-top: 40px;
+    @include laptop {
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+  &__table-head {
+    font-family: "RoadRadio", sans-serif;
+    display: flex;
+    padding: 17px 25px;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 178%;
+    background-color: var(--red);
+    border-radius: 4px;
+    min-width: 685px;
+    @include laptop {
+      width: 1200px;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 114%;
+    }
+    @include tablet-min {
+      width: 685px;
+    }
+  }
+  &__table-num {
+    flex: 0 1 70px;
+    @include tablet-min {
+      flex-basis: 35px;
+    }
+  }
+  &__table-dose {
+    flex: 0 1 145px;
+    &--value {
+      font-weight: bold;
+    }
+    @include tablet-min {
+      flex-basis: 100px;
+    }
+  }
+  &__table-expenditure {
+    flex: 0 1 480px;
+    @include desktop {
+      flex-basis: 300px;
+    }
+    @include tablet-min {
+      flex-basis: 165px;
+    }
+  }
+  &__table-culture {
+    flex: 1;
+    margin: 0;
+    &--value {
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  &__table-row {
+    display: flex;
+    min-width: 685px;
+    padding: 25px;
+    font-size: 18px;
+    line-height: 156%;
+    &:nth-child(odd) {
+      border-left: 1px solid var(--whisper);
+      border-right: 1px solid var(--whisper);
+    }
+    &:nth-child(even) {
+      border-radius: 4px;
+      background-color: var(--whisper);
+    }
+    @include laptop {
+      width: 1200px;
+      font-size: 16px;
+      line-height: 162%;
+    }
+    @include tablet-min {
+      width: 685px;
+    }
+  }
+}

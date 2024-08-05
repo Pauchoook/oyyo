@@ -1,0 +1,20 @@
+.slider-btn {
+  width: 52px;
+  height: 25px;
+  color: var(--god-hray);
+  transition: color .2s ease;
+  @include hover {
+    color: var(--red);
+  }
+  @include tablet {
+    width: 40px;
+    height: 20px;
+  }
+  &--next {
+    transform: rotate(180deg);
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}

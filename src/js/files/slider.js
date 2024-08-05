@@ -49,19 +49,41 @@ export default function slider() {
   if (applySlider) {
     const swiper = new Swiper(".apply__slider", {
       speed: 700,
-      // modules: [Autoplay],
+      modules: [Autoplay],
       autoplay: true,
       grabCursor: true,
       slidesPerView: "auto",
       spaceBetween: 6,
       breakpoints: {
         768: {
-          spaceBetween: 65
+          spaceBetween: 65,
         },
         480: {
-          spaceBetween: 40
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
+  const agronomySlider = document.querySelector(".agronomy__slider");
+
+  if (agronomySlider) {
+    const swiper = new Swiper(".agronomy__slider", {
+      speed: 700,
+      modules: [Autoplay, Navigation, Pagination],
+      // autoplay: true,
+      grabCursor: true,
+      navigation: {
+        prevEl: ".slider-btn--prev.agronomy__slider-btn",
+        nextEl: ".slider-btn--next.agronomy__slider-btn",
+      },
+      pagination: {
+        el: ".agronomy__slider-pagination",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          return `<span>0${current}</span> <span class="agronomy__nav-total">/0${total}</span>`;
         }
-      }
+      },
     });
   }
 }

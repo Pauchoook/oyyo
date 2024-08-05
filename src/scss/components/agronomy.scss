@@ -1,0 +1,98 @@
+.agronomy {
+  padding: 100px 0px;
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__content {
+    font-size: 20px;
+    line-height: 160%;
+    margin: 0;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__slider {
+    margin-top: 55px;
+    max-width: 1300px;
+    @include tablet {
+      margin-top: 35px;
+    }
+  }
+  &__map {
+    width: 100%;
+  }
+  &__slider-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+    @include mobile {
+      justify-content: space-between;
+    }
+  }
+  &__slider-pagination {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    font-size: 40px;
+    line-height: 70%;
+    color: var(--mishka);
+    @include tablet {
+      font-size: 32px;
+      line-height: 87%;
+    }
+  }
+  &__nav-total {
+    font-size: 20px;
+    transform: translateY(-10px);
+    @include tablet {
+      transform: translateY(-5px);
+      font-size: 16px;
+    }
+  }
+  &__list {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 35px;
+    @include desktop {
+      justify-content: start;
+    }
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 156%;
+    @include tablet {
+      gap: 30px;
+    }
+  }
+  &__list-icon {
+    width: 75px;
+    height: 75px;
+  }
+  &__list-content {
+    margin: 30px 0px 0px 0px;
+    font-size: 16px;
+    line-height: 175%;
+    @include mobile {
+      &.more-detail {
+        max-height: 225px;
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+  &__btn-more {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
+}
