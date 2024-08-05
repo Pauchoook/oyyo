@@ -1,0 +1,234 @@
+.interesting {
+  padding: 100px 0px;
+  background-color: var(--whisper);
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__container {
+    @include flex-between;
+    @include big-screen {
+      flex-direction: column;
+      // align-items: start;
+    }
+  }
+  &__nav {
+    max-width: 340px;
+    @include big-screen {
+      max-width: none;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+    font-size: 34px;
+    line-height: 126%;
+    @include laptop {
+      font-size: 30px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 123%;
+    }
+  }
+  &__nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+    @include big-screen {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+      border-bottom: 1px solid var(--mishka);
+      margin-bottom: 0;
+    }
+  }
+  &__nav-btn {
+    position: relative;
+    width: fit-content;
+    font-size: 24px;
+    transition: color 0.2s ease;
+    &.active {
+      color: var(--red);
+    }
+    @include hover {
+      color: var(--red);
+    }
+    @include big-screen {
+      padding-bottom: 15px;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background-color: currentColor;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      @include hover {
+        color: var(--red);
+        &::before {
+          opacity: 1;
+        }
+      }
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__catalog-btn {
+    display: block;
+    text-align: center;
+    max-width: 265px;
+    @include big-screen {
+      margin-top: 40px;
+    }
+    @include mobile {
+      max-width: none;
+    }
+  }
+  &__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 24px;
+    @include big-screen {
+      margin-top: 30px;
+    }
+    @include mobile {
+      gap: 10px;
+    }
+  }
+  &__card {
+    position: relative;
+    display: block;
+    flex: 0 1 calc(50% - 12px);
+    border-radius: 4px;
+    padding: 20px 25px;
+    background-color: white;
+    &--big {
+      flex: auto;
+      max-width: 380px;
+      width: 100%;
+      padding: 80px 30px 35px 30px;
+      margin: 0 22px;
+      .interesting__img {
+        margin: 0 auto;
+        width: 185px;
+      }
+      .interesting__card-nav {
+        margin-top: 70px;
+      }
+      .interesting__card-title {
+        font-size: 22px;
+      }
+      .interesting__card-type {
+        font-size: 16px;
+      }
+    }
+    @include big-screen {
+      &--big {
+        display: none;
+      }
+    }
+    @include tablet {
+      padding: 15px 15px 30px 15px;
+    }
+    @include mobile {
+      flex-basis: calc(50% - 5px);
+    }
+  }
+  &__elements {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 20px;
+    right: 20px;
+    @include mobile {
+      position: static;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  }
+  &__elements-item {
+    @include flex-center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 4px;
+    width: 55px;
+    padding: 12px 0px;
+    background-color: var(--whisper);
+    @include mobile {
+      flex: 0 1 calc(50% - 5px);
+    }
+  }
+  &__element-percent {
+    font-size: 14px;
+  }
+  &__element-num {
+    font-size: 12px;
+  }
+  &__img {
+    display: block;
+    width: 110px;
+    margin-left: 50px;
+    @include tablet {
+      margin-left: 0;
+    }
+    @include mobile {
+      width: 105px;
+      margin: 0 auto;
+    }
+  }
+  &__card-nav {
+    @include flex-between;
+    margin-top: 35px;
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+  &__card-title {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__card-type {
+    font-size: 14px;
+    color: var(--red);
+  }
+  &__card-btn {
+    @include flex-center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    transition: background-color .2s ease, color .2s ease;
+    @include hover {
+      background-color: transparent;
+      color: black;
+    }
+    @include mobile {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  &__card-arrow {
+    width: 20px;
+    height: 20px;
+    @include mobile {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

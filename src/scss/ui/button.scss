@@ -44,6 +44,15 @@
       color: white;
       border-color: black;
     }
+    &--black {
+      background-color: black;
+      border: 1px solid black;
+      color: white;
+      @include hover {
+        background-color: white;
+        color: black;
+      }
+    }
     &--green {
       background-color: var(--snow-flurry);
       border-color: var(--snow-flurry);
