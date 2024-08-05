@@ -1,0 +1,40 @@
+.error {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 110px;
+  background: url("@img/decor/404.jpg") center / cover no-repeat;
+  @include tablet-min {
+    background: url("@img/decor/404-mobile.jpg") center / cover no-repeat;
+  }
+  @include tablet {
+    padding-top: 70px;
+  }
+  &__content {
+    position: absolute;
+    display: none;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: right;
+    max-width: 105px;
+    right: 30px;
+    top: 180px;
+    color: white;
+    opacity: 0.8;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__btn {
+    position: absolute;
+    max-width: 375px;
+    text-align: center;
+    width: 100%;
+    bottom: 170px;
+    left: calc(50% - 189px);
+    @include tablet-min {
+      max-width: 345px;
+      left: calc(50% - 172px);
+      bottom: 125px;
+    }
+  }
+}
