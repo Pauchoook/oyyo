@@ -33,7 +33,182 @@
     padding: 15px 20px;
     border-radius: 4px;
     background-color: var(--whisper);
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &.active {
+      color: white;
+      background-color: var(--red);
+    }
+    @include hover {
+      color: white;
+      background-color: var(--red);
+    }
+  }
+  &__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 50px;
+  }
+  &__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 30px;
+    background-color: var(--whisper);
+    flex: 0 1 calc(50% - 12px);
+    z-index: 1;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--red);
+      .news-catalog__card-decor {
+        opacity: 0.3;
+      }
+    }
+    @include laptop {
+      flex-basis: 100%;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__card-decor {
+    position: absolute;
+    width: 250px;
+    transform: rotate(-90deg);
+    color: var(--mishka);
+    bottom: 50px;
+    right: -52px;
+    z-index: -1;
+    transition: opacity 0.2s ease;
+    @include desktop {
+      width: 270px;
+      bottom: 60px;
+    }
+    @include laptop {
+      width: 207px;
+      bottom: 21px;
+      right: -30px;
+    }
+    @include tablet-min {
+      width: 240px;
+      bottom: 37px;
+      right: -58px;
+    }
+  }
+  &__card-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card-day {
+    display: block;
+    font-size: 18px;
+  }
+  &__card-year {
+    display: block;
+    font-size: 31px;
+  }
+  &__card-head-btn {
+    font-size: 18px;
+    text-align: right;
+    @include tablet {
+      max-width: 145px
+    }
+  }
+  &__card-bottom {
+    @include flex-between;
+    margin-top: 55px;
+    @include big-screen {
+      margin-top: 25px;
+    }
+    @include tablet {
+      align-items: end;
+    }
+  }
+  &__card-content {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 162%;
+    max-width: 495px;
+    @include big-screen {
+      max-width: calc(100% - 75px);
+    }
+    @include tablet {
+      font-size: 14px;
+      max-width: calc(100% - 50px);
+      line-height: 130%;
+    }
+  }
+  &__card-btn {
+    position: relative;
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    span {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: currentColor;
+      &:first-child {
+        transform: rotate(90deg);
+      }
+    }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      span {
+        width: 20px;
+      }
+    }
+  }
+  &__nav {
+    @include flex-center;
+    gap: 14px;
+    margin-top: 70px;
+    @include tablet {
+      justify-content: space-between;
+      margin-top: 35px;
+    }
+  }
+  &__nav-pages {
+    @include flex-center;
+    gap: 14px;
+  }
+  &__btn-arrow {
+    @include flex-center;
+    width: 45px;
+    height: 45px;
+    transition: color 0.2s ease;
+    &--prev {
+      transform: rotate(180deg);
+    }
+    @include hover {
+      color: var(--red);
+    }
+  }
+  &__nav-icon {
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+  }
+  &__nav-btn {
+    @include flex-center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: var(--whisper);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
     &.active {
       color: white;
       background-color: var(--red);
