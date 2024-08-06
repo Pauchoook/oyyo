@@ -91,6 +91,12 @@
       max-width: none;
     }
   }
+  &__tab {
+    align-items: center;
+    &.active {
+      display: flex;
+    }
+  }
   &__catalog {
     display: flex;
     flex-wrap: wrap;
@@ -128,6 +134,12 @@
       }
       .interesting__card-type {
         font-size: 16px;
+      }
+    }
+    @include hover {
+      .interesting__card-btn {
+        background-color: transparent;
+        color: black;
       }
     }
     @include big-screen {
@@ -193,6 +205,12 @@
       margin-top: 20px;
     }
   }
+  &__card-values {
+    max-width: calc(100% - 40px);
+    @include mobile {
+      max-width: calc(100% - 30px);
+    }
+  }
   &__card-title {
     font-weight: 400;
     font-size: 18px;
@@ -211,10 +229,6 @@
     border: 1px solid black;
     color: white;
     transition: background-color .2s ease, color .2s ease;
-    @include hover {
-      background-color: transparent;
-      color: black;
-    }
     @include mobile {
       position: absolute;
       width: 30px;

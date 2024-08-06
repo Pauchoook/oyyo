@@ -48,6 +48,7 @@
     font-size: 32px;
     line-height: 150%;
     margin-bottom: 15px;
+    color: var(--light-gray);
     @include laptop {
       font-size: 26px;
     }
@@ -60,6 +61,7 @@
     margin: 0;
     padding-left: 30px;
     font-size: 20px;
+    line-height: 130%;
     @include laptop {
       padding-left: 0;
       font-size: 18px;

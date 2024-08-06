@@ -20,9 +20,18 @@
     padding: 30px 40px;
     background-color: var(--whisper);
     z-index: 1;
+    @include hover {
+      .rec-catalog__wrapper-arrow {
+        background-color: var(--red);
+      }
+    }
     &--red {
       color: white;
       background-color: var(--red);
+      transition: transform .2s ease;
+      @include hover {
+        transform: translateY(-30px);
+      }
     }
     @include big-screen {
       padding: 15px;
@@ -99,9 +108,6 @@
     background-color: black;
     color: white;
     transition: background-color 0.2s ease;
-    @include hover {
-      background-color: var(--red);
-    }
     @include laptop {
       width: 60px;
       height: 60px;
@@ -166,17 +172,17 @@
     font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transform: rotate(90deg);
-    bottom: 242px;
-    right: -125px;
+    writing-mode: vertical-rl;
     white-space: nowrap;
+    right: 65px;
+    bottom: 50px;
     @include big-screen {
-      right: -175px;
+      right: 45px;
     }
     @include desktop {
       position: static;
       white-space: initial;
-      transform: rotate(0);
+      writing-mode: horizontal-tb;
       order: 3;
       margin-top: 24px;
     }

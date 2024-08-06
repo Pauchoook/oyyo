@@ -39,6 +39,7 @@
   &__img {
     display: block;
     width: 1175px;
+    border-radius: 4px;
     @include tablet {
       height: 250px;
       width: calc(100% - 230px);

@@ -9,6 +9,7 @@ import slider from "./files/slider.js";
 import moreDetail from "./files/more-detail.js";
 import tab from "./files/tab.js";
 import { dropdown } from "./files/dropdown.js";
+import smoothScroll from "./files/smooth-scroll.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -20,3 +21,4 @@ slider();
 moreDetail();
 tab();
 dropdown();
+smoothScroll();

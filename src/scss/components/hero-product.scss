@@ -70,6 +70,7 @@
     flex-wrap: wrap;
   }
   &__left {
+    max-width: 465px;
     @include big-screen {
       width: 100%;
     }
@@ -203,11 +204,13 @@
   }
   &__spec-title {
     display: block;
+    white-space: nowrap;
     font-size: 14px;
     line-height: 214%;
   }
   &__spec-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
   }
   &__spec-item {
@@ -296,7 +299,7 @@
     width: 25px;
   }
   &__bottom {
-    padding: 5px 0px 30px 0px;
+    padding: 15px 0px 30px 0px;
     background: rgba(255, 255, 255, 0.08);
   }
   &__bottom-container {

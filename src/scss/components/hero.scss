@@ -4,7 +4,6 @@
   background-color: var(--red);
   z-index: 1;
   color: white;
-  min-height: 100vh;
   padding-top: 320px;
   padding: 185px 0px 215px 0px;
   @include big-screen {
@@ -19,14 +18,30 @@
   @include mobile {
     padding-top: 80px;
   }
+  &__container {
+    position: relative;
+  }
+  &__counter {
+    display: flex;
+    gap: 7px;
+    opacity: 0.12;
+  }
   &__number {
     display: block;
     font-weight: 300;
     font-size: 128px;
     line-height: 48%;
     text-transform: uppercase;
-    opacity: 0.12;
     margin-bottom: 35px;
+    &--total {
+      font-size: 32px;
+    }
+    @include laptop {
+      font-size: 98px;
+      &--total {
+        font-size: 32px;
+      }
+    }
     @include mobile {
       display: none;
     }
@@ -72,12 +87,13 @@
   &__img {
     position: absolute;
     width: 990px;
-    right: 150px;
-    top: 45px;
+    right: -70px;
+    bottom: -210px;
     z-index: -1;
     @include big-screen {
       width: 680px;
       right: 0;
+      bottom: 0;
     }
     @include desktop {
       width: 590px;
@@ -94,7 +110,7 @@
     @include mobile {
       max-width: none;
       width: 425px;
-      bottom: 110px;
+      bottom: 92px;
       right: auto;
       left: -20px;
     }
@@ -130,7 +146,7 @@
     @include mobile {
       max-width: none;
       width: 100%;
-      margin-top: 390px;
+      margin-top: 370px;
     }
   }
   &__mouse {

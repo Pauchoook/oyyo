@@ -55,7 +55,7 @@
   &__table-dose {
     flex: 0 1 145px;
     &--value {
-      font-weight: bold;
+      font-weight: 600;
     }
     @include tablet-min {
       flex-basis: 100px;
@@ -75,7 +75,7 @@
     margin: 0;
     &--value {
       span {
-        font-weight: bold;
+        font-weight: 600;
       }
     }
   }
