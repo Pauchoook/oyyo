@@ -2984,7 +2984,7 @@ body {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg)
 }
-.news-catalog__nav {
+.news-catalog__nav-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5248,7 +5248,7 @@ body {
   .news-catalog__card-btn span {
     width: 20px
   }
-  .news-catalog__nav {
+  .news-catalog__nav-bottom {
     justify-content: space-between;
     margin-top: 35px
   }
