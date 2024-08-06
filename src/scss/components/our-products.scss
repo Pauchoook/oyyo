@@ -1,0 +1,230 @@
+.our-products {
+  padding: 50px 0px 110px 0px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &__nav {
+    display: flex;
+    gap: 24px;
+  }
+  &__nav-btn {
+    position: relative;
+    border-radius: 4px;
+    background-color: var(--whisper);
+    flex: 1;
+    padding: 32px 33px;
+    transition: background-color 0.2s ease;
+    z-index: 1;
+    &--red {
+      color: white;
+      background-color: var(--red);
+    }
+    @include hover {
+      background-color: var(--red);
+      color: white;
+    }
+    @include tablet {
+      @include flex-center;
+      padding: 20px 15px;
+    }
+  }
+  &__nav-decor {
+    position: absolute;
+    width: 151px;
+    transform: rotate(-90deg);
+    right: -15px;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: -1;
+    @include desktop {
+      display: none;
+    }
+  }
+  &__nav-btn-title {
+    display: block;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include laptop {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+  &__nav-content {
+    margin: 0;
+    max-width: calc(100% - 100px);
+    font-size: 13px;
+    line-height: 154%;
+    text-transform: uppercase;
+    @include laptop {
+      display: none;
+    }
+  }
+  &__nav-img {
+    position: absolute;
+    width: 80px;
+    right: 30px;
+    bottom: -20px;
+    @include desktop {
+      bottom: auto;
+      top: -20px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 40px;
+    border-top: 1px solid var(--mishka);
+    margin-top: 60px;
+    @include tablet {
+      padding-top: 20px;
+      margin-top: 25px;
+      gap: 12px;
+    }
+    @include tablet-min {
+      &.row {
+        .our-products__card {
+          flex-basis: 100%;
+          display: flex;
+        }
+        .our-products__img {
+          margin: 0px 30px 0px 0px;
+        }
+      }
+    }
+    @include mobile {
+      gap: 8px;
+    }
+  }
+  &__card {
+    background-color: var(--whisper);
+    border-radius: 4px;
+    flex: 0 1 calc(25% - 18px);
+    padding: 50px 25px 25px 25px;
+    @include laptop {
+      flex-basis: calc(33.33% - 16px);
+    }
+    @include tablet {
+      padding: 20px 15px;
+      flex-basis: calc(50% - 10px);
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0px auto 55px auto;
+    width: 165px;
+    @include tablet {
+      width: 95px;
+      margin-bottom: 25px;
+    }
+  }
+  &__card-title {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+    color: var(--red);
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &__card-content {
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 220px;
+    margin: 0px 0px 5px 0px;
+    @include tablet-min {
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+  }
+  &__card-bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    @include tablet-min {
+      gap: 0;
+      justify-content: space-between;
+      align-items: end;
+    }
+  }
+  &__card-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include tablet-min {
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
+  }
+  &__card-logo {
+    width: 95px;
+  }
+  &__card-discount {
+    display: block;
+    font-size: 20px;
+  }
+  &__card-btn {
+    @include flex-center;
+    margin-left: auto;
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: transparent;
+      color: black;
+    }
+    @include desktop {
+      width: 40px;
+      height: 40px;
+    }
+    @include laptop {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__card-arrow {
+    width: 30px;
+    height: 30px;
+    @include laptop {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__catalog-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 26px;
+    margin-top: 50px;
+    color: var(--god-gray);
+    border: 1px solid var(--mishka);
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+    @include hover {
+      border-color: var(--red);
+      background-color: var(--red);
+      color: white;
+    }
+    @include tablet {
+      margin-top: 25px;
+    }
+  }
+}

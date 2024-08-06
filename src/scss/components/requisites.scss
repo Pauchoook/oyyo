@@ -1,0 +1,31 @@
+.requisites {
+  padding-bottom: 100px;
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  &__body {
+    display: flex;
+    @include laptop {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 0 1 50%;
+    padding-right: 20px;
+  }
+  &__item {
+    font-size: 18px;
+    a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+    a, span {
+      color: var(--red);
+    }
+  }
+}
