@@ -1,0 +1,71 @@
+.politic {
+  padding: 70px 0px;
+  @include tablet {
+    padding: 45px 0px;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 139%;
+    margin-bottom: 50px;
+    @include laptop {
+      font-size: 32px;
+    }
+    @include tablet {
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 133%;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 20px;
+    line-height: 160%;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      line-height: 150%;
+      font-size: 16px;
+    }
+  }
+  &__body {
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__item-title {
+    font-size: 32px;
+    line-height: 150%;
+    margin-bottom: 15px;
+    @include laptop {
+      font-size: 26px;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+  &__item-content {
+    margin: 0;
+    padding-left: 30px;
+    font-size: 20px;
+    @include laptop {
+      padding-left: 0;
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}
