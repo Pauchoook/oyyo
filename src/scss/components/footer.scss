@@ -45,6 +45,9 @@
     font-size: 12px;
     line-height: 167%;
     margin: 20px 0px;
+    @include mobile {
+      line-height: 133%;
+    }
   }
   &__info {
     padding-left: 80px;
@@ -80,6 +83,13 @@
         right: 40px;
         bottom: -85px;
         background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+    @include big-screen {
+      &:nth-child(2) {
+        &::after {
+          display: none;
+        }
       }
     }
     @include tablet {

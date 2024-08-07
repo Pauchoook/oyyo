@@ -6,6 +6,10 @@
   &__nav {
     display: flex;
     gap: 24px;
+    @include tablet {
+      gap: 12px;
+      flex-wrap: wrap;
+    }
   }
   &__nav-btn {
     position: relative;
@@ -127,6 +131,7 @@
     display: block;
     margin: 0px auto 55px auto;
     width: 165px;
+    height: fit-content;
     @include tablet {
       width: 95px;
       margin-bottom: 25px;

@@ -60,9 +60,13 @@
   &__politic {
     font-size: 14px;
     margin: 25px 0px 0px 0px;
+    line-height: 140%;
     a {
       color: var(--supernova);
       text-decoration: underline;
+    }
+    @include mobile {
+      font-size: 12px;
     }
   }
 }

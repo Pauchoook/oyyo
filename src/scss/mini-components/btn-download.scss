@@ -92,7 +92,7 @@
     height: 28px;
     color: var(--red);
     transition: color 0.2s ease;
-    transform: translateX(-5px);
+    // transform: translateX(-5px);
     @include laptop {
       width: 20px;
       height: 20px;
