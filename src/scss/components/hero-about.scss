@@ -8,6 +8,22 @@
   &__container {
     position: relative;
   }
+  &__title {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 97%;
+    margin: 70px 0px 0px 0px;
+    @include desktop {
+      font-size: 58px;
+    }
+    @include laptop {
+      font-size: 36px;
+    }
+    @include tablet {
+      font-size: 28px;
+      margin-top: 24px;
+    }
+  }
   &__decor {
     position: absolute;
     width: 985px;

@@ -26,29 +26,72 @@
   }
   &__slide {
     display: flex !important;
-    width: auto !important;
-    max-width: calc(100% - 30px);
-    height: auto;
-    gap: 45px;
+    width: 1360px !important;
     bottom: 0;
-    &:nth-child(odd) {
+    transition: max-width 0.5s ease;
+    &.swiper-slide-prev {
+      .apply__img-wrapper {
+        margin-left: auto;
+      }
+    }
+    &.swiper-slide-next {
+      .apply__slide-title {
+        right: auto;
+        left: 30px;
+      }
       .apply__slide-circle {
-        left: auto;
-        right: 30px;
-        .apply__slide-circle-wrapper {
-          background-color: white;
-          color: black;
-          span {
-            &:last-child {
-              transform: rotate(0);
-            }
+        left: 30px;
+        right: auto;
+      }
+      .apply__img-wrapper {
+        margin-left: 0;
+      }
+    }
+    &.swiper-slide-active {
+      .apply__slide-circle-wrapper {
+        background-color: white;
+        color: black;
+        span {
+          &:last-child {
+            transform: rotate(0);
           }
         }
       }
+      .apply__article {
+        max-width: 920px;
+        max-height: fit-content;
+        padding-left: 45px;
+      }
+    }
+    @media (max-width: 1535px) {
+      width: 1250px !important;
+    }
+    @include big-screen {
+      width: 1000px !important;
     }
     @include desktop {
       flex-direction: column;
+      width: 90% !important;
       gap: 30px;
+      &.swiper-slide-prev {
+        .apply__img-wrapper {
+          margin-left: 0;
+        }
+      }
+      &.swiper-slide-next {
+        .apply__article {
+          opacity: 0.3;
+        }
+        .apply__img-wrapper {
+          margin-left: 0;
+        }
+      }
+      &.swiper-slide-active {
+        .apply__article {
+          max-width: none;
+          padding-left: 0;
+        }
+      }
     }
   }
   &__img-wrapper {
@@ -56,7 +99,12 @@
     overflow: hidden;
     border-radius: 4px;
     flex: 0 0 470px;
+    height: 660px;
     color: white;
+    @include big-screen {
+      flex-basis: 350px;
+      height: 600px;
+    }
     @include laptop {
       flex: auto;
       width: 90%;
@@ -74,7 +122,10 @@
     @include flex-center;
     position: absolute;
     top: 30px;
-    left: 30px;
+    right: 30px;
+    transition:
+      left 0.5s ease,
+      right 0.5s ease;
     @include desktop {
       display: none;
     }
@@ -87,11 +138,19 @@
     border-radius: 50%;
     background-color: var(--red);
     color: white;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: white;
+      color: black;
+    }
     span {
       position: absolute;
       width: 24px;
       height: 2px;
       background-color: currentColor;
+      transition: transform 0.2s ease;
       &:last-child {
         transform: rotate(90deg);
       }
@@ -106,17 +165,19 @@
     line-height: 100%;
     text-transform: uppercase;
     max-width: 510px;
-    width: 100%;
-    transform: rotate(-90deg);
-    right: -170px;
-    bottom: 235px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    right: 30px;
+    bottom: 30px;
+    transition:
+      right 0.2s ease,
+      left 0.2s ease;
     @include desktop {
       transform: rotate(0);
+      writing-mode: horizontal-tb;
       left: 20px;
       bottom: 20px;
       right: auto;
-    }
-    @include desktop {
       font-size: 28px;
     }
     @include laptop {
@@ -147,7 +208,21 @@
     }
   }
   &__article {
-    max-width: 875px;
+    overflow: hidden;
+    padding-left: 0;
+    max-width: 0px;
+    max-height: 0px;
+    width: 100%;
+    height: 100%;
+    transition:
+      max-width 0.5s ease,
+      max-height 0.5s ease,
+      padding-left 0.5s ease,
+      opacity 0.5s ease;
+    @include desktop {
+      max-width: none;
+      max-height: none;
+    }
   }
   &__article-title {
     font-weight: 600;
@@ -162,8 +237,16 @@
   &__article-content {
     margin: 0;
     font-size: 16px;
-    line-height: 179%;
+    line-height: 174%;
+    span {
+      font-weight: 600;
+    }
+    @include big-screen {
+      font-size: 14px;
+      line-height: 150%;
+    }
     @include desktop {
+      font-size: 16px;
       &.more-detail {
         max-height: 450px;
         height: 100%;
@@ -178,13 +261,6 @@
   }
   &__more-btn {
     display: none;
-    // font-weight: 300;
-    // font-size: 16px;
-    // text-decoration: underline;
-    // color: var(--red);
-    // @include hover {
-    //   text-decoration: none;
-    // }
     @include desktop {
       display: block;
     }

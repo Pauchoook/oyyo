@@ -109,6 +109,12 @@
     border-radius: 4px;
     flex: 0 1 calc(25% - 18px);
     padding: 50px 25px 25px 25px;
+    @include hover {
+      .our-products__card-btn {
+        background-color: transparent;
+        color: black;
+      }
+    }
     @include laptop {
       flex-basis: calc(33.33% - 16px);
     }
@@ -186,10 +192,6 @@
     transition:
       color 0.2s ease,
       background-color 0.2s ease;
-    @include hover {
-      background-color: transparent;
-      color: black;
-    }
     @include desktop {
       width: 40px;
       height: 40px;

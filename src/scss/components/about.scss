@@ -87,26 +87,27 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     gap: 30px;
-    left: -160px;
-    bottom: 177px;
+    left: 7px;
+    bottom: 22px;
     @include laptop {
       gap: 20px;
-      left: -77px;
-      bottom: 98px;
+      left: 2px;
+      bottom: 9px;
     }
     @include tablet {
       gap: 10px;
-      left: -55px;
-      bottom: 73px;
+      left: 6px;
+      bottom: 7px;
     }
   }
   &__catalog-icon {
-    display: block;
     color: var(--red);
     width: 105px;
     height: 60px;
+    transform: rotate(90deg);
     @include laptop {
       width: 60px;
       height: 40px;

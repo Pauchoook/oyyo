@@ -20,9 +20,11 @@
     justify-content: space-between;
     box-sizing: border-box;
     gap: 30px;
+    padding-bottom: 50px;
     @include laptop {
       flex-direction: column;
       gap: 60px;
+      padding-bottom: 0;
     }
   }
   &__img-wrapper {
@@ -40,24 +42,26 @@
   }
   &__img-preview {
     position: absolute;
-    height: 305px;
-    width: 440px;
-    background-color: var(--god-gray);
+    width: 305px;
+    height: 440px;
+    background-color: var(--light-black);
     border-radius: 4px;
     padding: 10px;
     color: white;
-    transform: rotate(-90deg);
-    right: -8px;
-    bottom: 17px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    left: 0;
+    bottom: -50px;
+    box-sizing: border-box;
     z-index: -1;
     @include laptop {
       width: 300px;
       height: 290px;
-      right: 70px;
-      bottom: -25px;
+      padding-bottom: 0;
+      bottom: -30px;
     }
     @include mobile {
-      right: 50px;
+      // right: 50px;
       padding: 7px;
     }
   }

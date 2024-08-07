@@ -50,16 +50,17 @@ export default function slider() {
     const swiper = new Swiper(".apply__slider", {
       speed: 700,
       modules: [Autoplay],
-      autoplay: true,
+      // autoplay: true,
       grabCursor: true,
       slidesPerView: "auto",
+      slideToClickedSlide: true,
       spaceBetween: 6,
       breakpoints: {
-        768: {
+        1440: {
           spaceBetween: 65,
         },
         480: {
-          spaceBetween: 40,
+          spaceBetween: 25,
         },
       },
     });
