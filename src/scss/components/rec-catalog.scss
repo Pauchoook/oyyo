@@ -13,7 +13,7 @@
   }
   &__item {
     position: relative;
-    display: block;
+    display: inline-block;
     flex: 0 1 calc(33% - 16px);
     min-height: 615px;
     border-radius: 4px;
@@ -156,7 +156,6 @@
     display: block;
     width: 300px;
     height: fit-content;
-    object-fit: contain;
     z-index: -1;
     @include laptop {
       width: 175px;
