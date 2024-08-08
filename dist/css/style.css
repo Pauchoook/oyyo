@@ -1218,9 +1218,7 @@ body {
 .rec-catalog__img {
   display: block;
   width: 300px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
   z-index: -1
 }
 .rec-catalog__content {
@@ -1403,9 +1401,7 @@ body {
 .rec-products__product-img {
   display: block;
   width: 210px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
   transition: opacity .4s ease,visibility .2s ease,max-width .4s ease
 }
 .rec-products__product-img--bg {
