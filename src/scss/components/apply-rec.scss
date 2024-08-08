@@ -1,5 +1,6 @@
 .apply-rec {
   padding-bottom: 135px;
+  overflow: hidden;
   @include tablet {
     padding-bottom: 45px;
   }
@@ -8,7 +9,8 @@
     white-space: nowrap;
     @include scrollbarGorizont;
     @include big-screen {
-      margin-right: -20px;
+      margin: 0px -20px;
+      padding-left: 20px;
     }
     @include mobile {
       .tab-nav__btn {
@@ -21,7 +23,8 @@
     margin-top: 40px;
     @include laptop {
       overflow-x: auto;
-      margin-right: -20px;
+      margin: 0px -20px;
+      padding-left: 20px;
       &::-webkit-scrollbar {
         width: 0;
         height: 0;

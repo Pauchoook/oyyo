@@ -12,6 +12,9 @@
       align-items: start;
     }
   }
+  &.max-start {
+    align-items: start;
+  }
   &__logo {
     width: 130px;
     @include laptop {

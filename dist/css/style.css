@@ -541,6 +541,9 @@ body {
   gap: 25px;
   margin-bottom: 75px
 }
+.section-head.max-start {
+  align-items: start
+}
 .section-head__logo {
   width: 130px
 }
@@ -1396,6 +1399,7 @@ body {
   margin-bottom: 10px
 }
 .rec-products__product-img {
+  display: inline-block;
   width: 210px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2432,7 +2436,8 @@ body {
   display: none
 }
 .apply-rec {
-  padding-bottom: 135px
+  padding-bottom: 135px;
+  overflow: hidden
 }
 .apply-rec__tab-nav {
   overflow-y: auto;
@@ -4065,7 +4070,8 @@ body {
     display: none
   }
   .apply-rec__tab-nav {
-    margin-right: -20px
+    margin: 0 -20px;
+    padding-left: 20px
   }
   .interesting__container {
     flex-direction: column
@@ -4749,7 +4755,8 @@ body {
   }
   .apply-rec__table {
     overflow-x: auto;
-    margin-right: -20px
+    margin: 0 -20px;
+    padding-left: 20px
   }
   .apply-rec__table::-webkit-scrollbar {
     width: 0;
@@ -4824,13 +4831,9 @@ body {
   .advantages-products__content {
     font-size: 18px
   }
-  .news-catalog__container {
-    padding: 0
-  }
   .news-catalog__nav {
     gap: 24px;
-    flex-wrap: wrap;
-    padding-left: 20px
+    flex-wrap: wrap
   }
   .news-catalog__buttons {
     gap: 18px;
@@ -5820,6 +5823,10 @@ body {
   }
   .error__btn {
     max-width: 345px
+  }
+  .news-catalog__buttons {
+    padding: 0 20px;
+    margin: 0 -20px
   }
   .news-catalog__card-decor {
     width: 240px;
