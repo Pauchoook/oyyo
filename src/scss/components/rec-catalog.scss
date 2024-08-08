@@ -154,8 +154,9 @@
   }
   &__img {
     display: block;
-    object-fit: contain;
     width: 300px;
+    height: fit-content;
+    object-fit: contain;
     z-index: -1;
     @include laptop {
       width: 175px;

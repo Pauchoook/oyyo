@@ -1218,9 +1218,12 @@ body {
 }
 .rec-catalog__img {
   display: block;
+  width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -o-object-fit: contain;
   object-fit: contain;
-  width: 300px;
   z-index: -1
 }
 .rec-catalog__content {
@@ -3405,10 +3408,11 @@ body {
   display: block;
   -o-object-fit: contain;
   object-fit: contain;
-  margin: 0 auto 55px auto;
-  width: 165px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto 55px auto;
+  width: 165px;
   height: fit-content
 }
 .our-products__card-title {
