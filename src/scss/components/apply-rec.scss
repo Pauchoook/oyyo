@@ -7,6 +7,9 @@
     overflow-y: auto;
     white-space: nowrap;
     @include scrollbarGorizont;
+    @include big-screen {
+      margin-right: -20px;
+    }
     @include mobile {
       .tab-nav__btn {
         white-space: normal;
@@ -18,6 +21,7 @@
     margin-top: 40px;
     @include laptop {
       overflow-x: auto;
+      margin-right: -20px;
       &::-webkit-scrollbar {
         width: 0;
         height: 0;

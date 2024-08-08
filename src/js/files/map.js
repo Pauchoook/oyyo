@@ -17,7 +17,7 @@ export default function map() {
           // Необходимо указать данный тип макета.
           iconLayout: "default#image",
           // Своё изображение иконки метки.
-          iconImageHref: "../img/logos/icon-map.svg",
+          iconImageHref: "./img/logos/icon-map.svg",
           // Размеры метки.
           iconImageSize: [82, 105],
         }

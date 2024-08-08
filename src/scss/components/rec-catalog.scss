@@ -90,6 +90,7 @@
     font-weight: 400;
     font-size: 36px;
     max-width: calc(100% - 65px);
+    width: 100%;
     text-transform: uppercase;
     @include desktop {
       font-size: 30px;

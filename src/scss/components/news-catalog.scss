@@ -94,6 +94,7 @@
     color: var(--mishka);
     bottom: 50px;
     right: -52px;
+    opacity: 0.35;
     z-index: -1;
     transition: opacity 0.2s ease;
     @include desktop {
@@ -153,6 +154,9 @@
       font-size: 14px;
       max-width: calc(100% - 50px);
       line-height: 130%;
+    }
+    @include mobile {
+      line-height: 16px;
     }
   }
   &__card-btn {

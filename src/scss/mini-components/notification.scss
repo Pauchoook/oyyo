@@ -1,0 +1,47 @@
+.notification {
+  &__window {
+    padding: 25px;
+    background-image: none;
+    background-color: var(--monza);
+    max-width: 500px;
+    &::before {
+      display: none;
+    }
+    @include tablet {
+      max-width: 345px;
+    }
+  }
+  &__window-decor {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include tablet {
+      width: 160px;
+    }
+  }
+  &__close {
+    right: 8px;
+    top: 8px;
+  }
+  &__title {
+    font-size: 38px;
+    max-width: 255px;
+    @include tablet {
+      font-size: 26px;
+    }
+  }
+  &__content {
+    margin: 35px 0px 0px 0px;
+    font-weight: 300;
+    font-size: 24px;
+    max-width: 260px;
+    line-height: 125%;
+    @include tablet {
+      max-width: 175px;
+      font-size: 16px;
+      margin-top: 25px;
+    }
+  }
+}

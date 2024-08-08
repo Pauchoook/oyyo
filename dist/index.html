@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240807151346">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240808123721">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -36,7 +36,7 @@
 					<li>
 						<a href="#" target="_blank" class="header__nav-btn">О нас</a>
 					</li>
-					<li>
+					<li data-da=".header__connection,993,0" class="header__title-btn-contacts">
 						<a href="#" target="_blank" class="header__nav-btn">Контакты</a>
 					</li>
 					<li>
@@ -146,6 +146,22 @@
 		</div>
 	</div>
 
+	<div data-modal="notification" class="notification modal">
+		<div class="modal__overlay">
+			<div class="modal__window notification__window">
+				<img src="img/decor/flower.webp" alt="Канистра и лепесток" class="notification__window-decor" />
+				<button class="btn notification__close modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<h2 class="title notification__title">Заявка отправлена</h2>
+				<p class="notification__content">
+					Мы свяжемся с вами в течении 15 минут
+				</p>
+			</div>
+		</div>
+	</div>
 	<main>
 
 		<section class="hero">
@@ -685,8 +701,8 @@
 			<button data-modal="call" class="btn btn-custom btn-modal btn-stroke mobile-menu__btn-call">Заказать звонок</button>
 		</div>
 	</div>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&_v=20240807151346" type="text/javascript"></script>
-	<script src="js/app.min.js?_v=20240807151346"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&_v=20240808123721" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20240808123721"></script>
 </body>
 
 </html>

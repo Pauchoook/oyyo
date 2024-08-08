@@ -28,10 +28,6 @@
     font-size: 13px;
     color: var(--dusty-gray);
     writing-mode: vertical-rl;
-    transition: color .2s ease;
-    @include hover {
-      color: var(--red);
-    }
     @include laptop {
       writing-mode: horizontal-tb;
     }
@@ -98,12 +94,12 @@
   &__head-line {
     flex: 1;
     height: 1px;
-    background-color: var(--light-black);
+    background-color: var(--dusty-gray);
   }
   &__day {
     display: block;
     font-weight: 300;
-    color: var(--light-black);
+    color: var(--dusty-gray);
     font-size: 18px;
   }
   &__year {
@@ -111,7 +107,7 @@
     font-size: 31px;
     line-height: 200%;
     text-transform: uppercase;
-    color: var(--light-black);
+    color: var(--dusty-gray);
   }
   &__content {
     margin: 0;

@@ -128,6 +128,16 @@
     @include desktop {
       font-size: 14px;
     }
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+  &__title-btn-contacts {
+    @include laptop {
+      list-style: none;
+      display: block;
+      margin-bottom: 30px;
+    }
   }
   &__btn-call {
     margin-left: 80px;
