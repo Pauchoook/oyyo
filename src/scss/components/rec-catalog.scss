@@ -13,7 +13,6 @@
   }
   &__item {
     position: relative;
-    display: inline-block;
     flex: 0 1 calc(33% - 16px);
     min-height: 615px;
     border-radius: 4px;
@@ -43,6 +42,7 @@
     }
     @include tablet {
       flex: auto;
+      display: flex;
       min-height: 235px;
       padding: 30px;
       &--red {
@@ -161,10 +161,7 @@
       width: 175px;
     }
     @include tablet {
-      position: absolute;
-      right: 0;
-      top: 25px;
-      right: 20px;
+      margin-left: auto;
       width: 185px;
     }
     @include mobile {

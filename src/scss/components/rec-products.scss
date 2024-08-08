@@ -112,12 +112,15 @@
     }
   }
   &__product-images {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     flex: 1;
     margin-bottom: 10px;
     @include tablet {
       margin-bottom: 20px;
+    }
+    @include mobile {
+      display: block;
     }
   }
   &__product-img {
@@ -140,7 +143,11 @@
       width: 110px;
     }
     @include mobile {
+      margin: 0 auto;
       width: 80px;
+      &--bg {
+        display: none;
+      }
     }
   }
   &__product-bottom {

@@ -109,7 +109,7 @@
     }
   }
   &__card {
-    display: inline-block;
+    display: block;
     background-color: var(--whisper);
     border-radius: 4px;
     flex: 0 1 calc(25% - 18px);
@@ -130,10 +130,9 @@
   }
   &__img {
     display: block;
-    height: fit-content;
     margin: 0px auto 55px auto;
     width: 165px;
-    height: fit-content;
+    height: auto;
     @include tablet {
       width: 95px;
       margin-bottom: 25px;
