@@ -129,6 +129,7 @@
   }
   &__img {
     display: block;
+    object-fit: contain;
     margin: 0px auto 55px auto;
     width: 165px;
     height: fit-content;

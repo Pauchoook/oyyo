@@ -1218,6 +1218,8 @@ body {
 }
 .rec-catalog__img {
   display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 300px;
   z-index: -1
 }
@@ -1399,11 +1401,13 @@ body {
   margin-bottom: 10px
 }
 .rec-products__product-img {
-  display: inline-block;
+  display: block;
   width: 210px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -o-object-fit: contain;
+  object-fit: contain;
   transition: opacity .4s ease,visibility .2s ease,max-width .2s ease
 }
 .rec-products__product-img--bg {
@@ -3399,6 +3403,8 @@ body {
 }
 .our-products__img {
   display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
   margin: 0 auto 55px auto;
   width: 165px;
   height: -webkit-fit-content;
@@ -5118,6 +5124,8 @@ body {
   .advantages__list {
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding-left: 20px;
+    margin: 0 -20px;
     padding-bottom: 25px
   }
   .advantages__list::-webkit-scrollbar {

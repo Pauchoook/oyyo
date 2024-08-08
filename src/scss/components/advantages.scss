@@ -124,6 +124,8 @@
     @include tablet {
       flex-wrap: nowrap;
       overflow-x: auto;
+      padding-left: 20px;
+      margin: 0 -20px;
       padding-bottom: 25px;
       &::-webkit-scrollbar {
         height: 2px;

@@ -121,9 +121,10 @@
     }
   }
   &__product-img {
-    display: inline-block;
+    display: block;
     width: 210px;
     height: fit-content;
+    object-fit: contain;
     transition:
       opacity 0.4s ease,
       visibility 0.2s ease,
